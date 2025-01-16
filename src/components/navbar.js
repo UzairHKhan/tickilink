@@ -2,22 +2,25 @@ import styled from "styled-components";
 import { FaArrowRight } from "react-icons/fa";
 import logo from "../images/logo.png";
 import { navItem } from "./data";
+import AnimatedButton from "./commons/AnimatedButton";
 
 const Navbar = () => {
   return (
     <Header>
       <Nav className="wrapper">
         <div>
-          <img src={logo} alt="fullexaLogo" />
+          <img src={logo} alt="tickilinkLogo" height='70px' />
         </div>
         <NavItem>
           {navItem?.map((item, ind) => {
             return <li key={ind}>{item}</li>;
           })}
         </NavItem>
-        <Button>
-          Consultancy <FaArrowRight />
-        </Button>
+        
+        <div></div>
+        <AnimatedButton>
+          Contact Us
+        </AnimatedButton>
       </Nav>
     </Header>
   );
@@ -26,14 +29,14 @@ export default Navbar;
 
 const Header = styled.div`
   width: 100%;
-  position: fixed;
   top: 0;
+  background: #202020;
 `;
 
 const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
-  padding: 10px;
+  padding: 24px 10px;
   align-items: center;
   margin: 0 auto;
 `;
@@ -43,13 +46,17 @@ const NavItem = styled.ul`
   li {
     cursor: pointer;
     padding: 10px 20px;
+    color: #fff;
   }
   li:hover {
-    background: #ea5818;
-    color: white;
+    color: #F0A351;
     border-radius: 2px;
   }
 `;
+
+// const ListItem = styled.li`
+//   color: #fff;
+// `
 
 const Button = styled.div`
   background: #ea5818;
