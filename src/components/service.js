@@ -4,7 +4,7 @@ import { FaArrowRight } from "react-icons/fa";
 
 const Service = () => {
   return (
-    <ServiceContainer className="wrapper">
+    <ServiceContainer>
       <div className="content">
         <p>Services</p>
         <h3>We provide All-in-one Solution for every IT job</h3>

@@ -1,19 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+@font-face {
+  font-family: 'Sharp Grotesk'; 
+  src: url('./fonts/Medium19.woff') format('woff'),
+   url('./fonts/Medium19.woff2') format('woff2'),
+  ;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Sharp Grotesk"
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Inter",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #202020;
+  
 }
 
+
+
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", "Sharp Grotesk"
     monospace;
 }
 

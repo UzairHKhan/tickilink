@@ -6,7 +6,7 @@ import { heroCard } from "./data";
 const Hero = () => {
   return (
     <Section>
-      <HeroContainer className="wrapper">
+      <HeroContainer>
         <div className="heroContent">
           <div className="content">
             <p className="heading">Solution For Your Business</p>
