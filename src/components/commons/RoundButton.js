@@ -4,7 +4,7 @@ import ArrowIcon from "../icons/ArrowIcon";
 
 const RoundButton = () => {
   return (
-    <Button className="round-button">
+    <Button>
       <ArrowIcon />
     </Button>
   );

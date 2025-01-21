@@ -1,12 +1,12 @@
 import styled from "styled-components";
 import { FaArrowRight } from "react-icons/fa";
-import logo from "../images/logo.png";
+import logo from "../images/logo.svg";
 import { navItem } from "./data";
 import AnimatedButton from "./commons/AnimatedButton";
 
 const Navbar = () => {
   return (
-    <Header>
+    <Header id="header">
       <Nav className="wrapper">
         <div>
           <img src={logo} alt="tickilinkLogo" height='70px' />
@@ -16,8 +16,6 @@ const Navbar = () => {
             return <li key={ind}>{item}</li>;
           })}
         </NavItem>
-        
-        <div></div>
         <AnimatedButton>
           Contact Us
         </AnimatedButton>
@@ -36,7 +34,7 @@ const Header = styled.div`
 const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
-  padding: 24px 10px;
+  padding: 12px 10px;
   align-items: center;
   margin: 0 auto;
 `;
@@ -47,6 +45,10 @@ const NavItem = styled.ul`
     cursor: pointer;
     padding: 10px 20px;
     color: #fff;
+    font-family: Manrope;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
   }
   li:hover {
     color: #F0A351;
