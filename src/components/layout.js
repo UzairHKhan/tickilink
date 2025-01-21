@@ -5,6 +5,7 @@ import About from "./about";
 import Service from "./service";
 import Career from "./career";
 import banner from "../images/banner.svg";
+import Portfolio from "./portfolio";
 
 const Layout = ({ chilldren }) => {
   return (
@@ -15,6 +16,7 @@ const Layout = ({ chilldren }) => {
       <BannerWrapper>
         <Banner src={banner} alt="banner" />
       </BannerWrapper>
+      <Portfolio />
       <Career />
       {/* <Service /> */}
     </Containter>

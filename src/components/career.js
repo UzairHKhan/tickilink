@@ -51,8 +51,7 @@ const CareerContainer = styled.div`
   display: flex;
   position: relative;
   flex-direction: column;
-  height: 896px;
-  margin-top: 32px;
+  margin: 32px 0;
   column-gap: 116px;
   ul {
     margin-left: 20px;

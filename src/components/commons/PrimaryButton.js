@@ -19,4 +19,5 @@ const Button = styled.div`
     border: none;
     color: #fff;
     cursor: pointer;
+    font-family: Manrope;
 `
