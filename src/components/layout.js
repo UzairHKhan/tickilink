@@ -3,6 +3,7 @@ import Hero from "./hero";
 import Navbar from "./navbar";
 import About from "./about";
 import Service from "./service";
+import Career from "./career";
 
 const Layout = ({ chilldren }) => {
   return (
@@ -10,6 +11,7 @@ const Layout = ({ chilldren }) => {
       <Navbar />
       <Hero />
       <About />
+      <Career />
       <Service />
     </Containter>
   );
