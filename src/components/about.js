@@ -83,9 +83,7 @@ const AboutContainer = styled.div`
   display: flex;
   position: relative;
   flex-direction: column;
-  height: 896px;
-  margin-top: 108px;
-  column-gap: 116px;
+  margin-top: 32px;
   ul {
     margin-left: 20px;
     margin-top: 44px;

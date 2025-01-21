@@ -4,6 +4,7 @@ import Navbar from "./navbar";
 import About from "./about";
 import Service from "./service";
 import Career from "./career";
+import banner from "../images/banner.svg";
 
 const Layout = ({ chilldren }) => {
   return (
@@ -11,8 +12,11 @@ const Layout = ({ chilldren }) => {
       <Navbar />
       <Hero />
       <About />
+      <BannerWrapper>
+        <Banner src={banner} alt="banner" />
+      </BannerWrapper>
       <Career />
-      <Service />
+      {/* <Service /> */}
     </Containter>
   );
 };
@@ -24,3 +28,17 @@ const Containter = styled.div`
   flex-direction: column;
   align-items: center;
 `;
+
+const BannerWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 100vw;
+  height: 300px;
+`;
+
+const Banner = styled.img`
+  width: 100vw;
+  scale: 1.1;
+`
