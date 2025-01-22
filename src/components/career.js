@@ -17,44 +17,61 @@ const careerData = [
 const Career = () => {
   return (
     <CareerContainer className="wrapper">
-      <CareerSection>Career</CareerSection>
-      <CareerContent>
-        <div>
-          <Title>Take your career to the next level</Title>
-          <TextContent>
-            Lorem ipsum dolor sit amet consectetur. Vitae purus faucibus velit
-            est a. Posuere volutpat blandit lectus nisl vitae lacus a gravida
-            nibh. Aliquam morbi sociis donec gravida vel et Luctus faucibus sit
-            leo.
-            <ul>
-              {careerData.map((item, idx) => (
-                <li key={idx}>{item}</li>
-              ))}
-            </ul>
-          </TextContent>
-          <AnimatedButton>Explore More</AnimatedButton>
-        </div>
-        <CareerVideo>
-          <video width="100%" height="724px" autoPlay loop muted>
-            <source src="/career-video.mp4" type="video/mp4" />
-            Yo browser does not support the video format.
-          </video>
-        </CareerVideo>
-      </CareerContent>
+      <CareerWrapper>
+        <CareerSection>Career</CareerSection>
+        <CareerContent>
+          <div>
+            <Title>Take your career to the next level</Title>
+            <TextContent>
+              Lorem ipsum dolor sit amet consectetur. Vitae purus faucibus velit
+              est a. Posuere volutpat blandit lectus nisl vitae lacus a gravida
+              nibh. Aliquam morbi sociis donec gravida vel et Luctus faucibus
+              sit leo.
+              <ul>
+                {careerData.map((item, idx) => (
+                  <li key={idx}>{item}</li>
+                ))}
+              </ul>
+            </TextContent>
+            <AnimatedButton>Explore More</AnimatedButton>
+          </div>
+          <CareerVideo>
+            <video
+              //   width="634px"
+              //   height="740px"
+              //   border-radius="80px"
+              autoPlay
+              loop
+              muted
+            >
+              <source src="/career-video.mp4" type="video/mp4" />
+              Your browser does not support the video format.
+            </video>
+          </CareerVideo>
+        </CareerContent>
+      </CareerWrapper>
     </CareerContainer>
   );
 };
 
 export default Career;
 
+const CareerWrapper = styled.div`
+  background-color: #1a1b1e;
+  padding: 30px;
+  border-radius: 40px;
+  width: 1400px;
+`;
+
 const CareerContainer = styled.div`
   display: flex;
   position: relative;
   flex-direction: column;
-  margin: 32px 0;
+  height: 896px;
+  margin-top: 108px;
   column-gap: 116px;
   ul {
-    margin-left: 20px;
+    margin-left: 40px;
     margin-top: 44px;
   }
 `;
@@ -84,25 +101,24 @@ const TextContent = styled.div`
   font-weight: 400;
   line-height: 30px;
   width: 636px;
-  height: 420px;
+  height: 565px;
   margin-top: 22px;
-  margin-bottom: 100px;
 `;
 
 const CareerContent = styled.div`
   display: flex;
+  width: 1600px;
+  height: 802px;
+  padding: 10px;
 `;
 
 const CareerVideo = styled.div`
-  /* display: flex;
-  flex-direction: column; */
-  /* width: 838px; */
-  /* row-gap: 50px; */
-  margin-left: 110px;
+  width: 634px;
+  margin-left: 80px;
+
   video {
-    /* height: 740px; */
-    /* background-color: #f0a351 !important; */
-    border-radius: 30px;
-    /* height: 724px; */
+    overflow: hidden;
+    border-radius: 20px;
+    height: 724px;
   }
 `;
