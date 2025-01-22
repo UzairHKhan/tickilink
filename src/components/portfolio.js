@@ -1,8 +1,5 @@
 import styled from "styled-components";
-
-
-
-
+import PortfolioSwiper from "./commons/PortfolioSwiper";
 
 const Portfolio = () => {
   return (
@@ -10,8 +7,11 @@ const Portfolio = () => {
       <PortfolioSection>Portfolio</PortfolioSection>
       <Title>Translating Technolo Into A Positive Impact</Title>
       <TextContent>
-        We are proud of our work and the impact it has on our clients and their customers. We have worked with a variety of industries, from healthcare to finance, and we are always excited to take on new challenges.
+        We are proud of our work and the impact it has on our clients and their
+        customers. We have worked with a variety of industries, from healthcare
+        to finance, and we are always excited to take on new challenges.
       </TextContent>
+      <PortfolioSwiper />
     </PortfolioContainer>
   );
 };
@@ -20,6 +20,7 @@ const PortfolioContainer = styled.div`
   display: flex;
   position: relative;
   flex-direction: column;
+  align-items: center;
   margin-top: 32px;
   column-gap: 116px;
 `;
@@ -51,11 +52,8 @@ const TextContent = styled.div`
   font-weight: 400;
   line-height: 30px;
   width: 636px;
-  height: 420px;
   margin-top: 22px;
-  margin-bottom: 100px;
   text-align: center;
 `;
-
 
 export default Portfolio;
