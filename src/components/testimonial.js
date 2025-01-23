@@ -118,6 +118,8 @@ const QuoteContainer = styled.div`
   border-radius: 20px;
   background: #1a1b1e;
   margin: 20px auto;
+  height: 220px;
+  padding-top: 90px;
 `;
 
 const QuoteText = styled.p`
