@@ -10,17 +10,20 @@ const testimonials = [
     name: "Zhon Done",
     title: "Customer",
     image: "/customerPhoto.png",
+    svg: "/Quotes.svg",
   },
   {
     text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
     name: "Jane Smith",
     title: "Designer",
+    svg: "/Quotes.svg",
     image: "/customerPhoto.png",
   },
   {
     text: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum.",
     name: "John Doe",
     title: "Entrepreneur",
+    svg: "/Quotes.svg",
     image: "/customerPhoto.png",
   },
 ];
@@ -48,6 +51,9 @@ const Testimonial = () => {
         <StyledSlider {...settings}>
           {testimonials.map((test, idx) => (
             <QuoteContainer key={idx}>
+              <QuoteWrapper>
+                <QuoteSvg src={test.svg} alt="Quote" />
+              </QuoteWrapper>
               <QuoteText>{test.text}</QuoteText>
               <CustomerInfo>
                 <CustomerImage src={test.image} alt={test.name} />
@@ -77,6 +83,7 @@ const TestimonialSection = styled.div`
   /* width: auto; */
   width: 1400px;
   margin-left: 60px;
+  margin-bottom: 60px;
   /* text-align: center; */
 `;
 
@@ -106,20 +113,23 @@ const StyledSlider = styled(Slider)`
 `;
 
 const TestimonialWrapper = styled.div`
-  /* background: #1a1b1e; */
+  background: #1a1b1e;
   /* padding: 20px; */
-  /* border-radius: 20px; */
+  border-radius: 20px;
+  /* display: flex; */
+  /* justify-content: center; */
   /* margin: 20px auto; */
   width: 1400px;
+  margin-top: 40px;
 `;
 
 const QuoteContainer = styled.div`
-  padding: 20px;
-  border-radius: 20px;
-  background: #1a1b1e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   margin: 20px auto;
-  height: 220px;
-  padding-top: 90px;
+  height: 150px;
 `;
 
 const QuoteText = styled.p`
@@ -186,4 +196,17 @@ const Dash = styled.div`
   background-color: ${(props) => (props.active ? "#f0a351" : "#666666")};
   border-radius: 2px;
   transition: background-color 0.3s ease;
+`;
+
+const QuoteSvg = styled.img`
+  width: 40px;
+  height: auto;
+  margin-bottom: 20px;
+  /* display: block; */
+  text-align: center;
+`;
+
+const QuoteWrapper = styled.div`
+  display: flex;
+  justify-content: center;
 `;
