@@ -6,6 +6,7 @@ import Service from "./service";
 import Career from "./career";
 import banner from "../images/banner.svg";
 import Portfolio from "./portfolio";
+import Testimonial from "./testimonial";
 
 const Layout = ({ chilldren }) => {
   return (
@@ -18,6 +19,7 @@ const Layout = ({ chilldren }) => {
       </BannerWrapper>
       <Portfolio />
       <Career />
+      <Testimonial />
       {/* <Service /> */}
     </Containter>
   );
@@ -43,4 +45,4 @@ const BannerWrapper = styled.div`
 const Banner = styled.img`
   width: 100vw;
   scale: 1.1;
-`
+`;
