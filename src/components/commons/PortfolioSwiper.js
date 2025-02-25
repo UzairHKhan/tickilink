@@ -64,9 +64,20 @@ const PortfolioSwiper = () => {
   return (
     <SwiperContainer>
       <Swiper
+      breakpoints={{
+        0: {
+          slidesPerView: 1.5,
+        },
+        740: {
+          slidesPerView: 2.5,
+        },
+        1024: {
+          slidesPerView: 4.5,
+        },
+      }}
         modules={[Autoplay]}
         autoplay={{ delay: 6000 }}
-        slidesPerView={4.5}
+        // slidesPerView={1.5}
         centeredSlides={true}
         spaceBetween={30}
         loop={true}
@@ -76,7 +87,7 @@ const PortfolioSwiper = () => {
             {({ isActive, isPrev, isNext }) => (
                 <ImageContainer isActive={isActive} isPrev={isPrev} isNext={isNext}>
                     <ImageWrapper>
-                    <Image src={project.img} alt={project.title} height="550px" />
+                    <Image src={project.img} alt={project.title} height="450px" />
                     </ImageWrapper>
                 </ImageContainer>
             )}
@@ -99,6 +110,12 @@ const ImageContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  @media (max-width: 1024px) {
+    height: 520px;
+  };
+  @media (max-width: 740px) {
+    height: 420px;
+  };
 `;
 
 const ImageWrapper = styled.div`
@@ -108,6 +125,13 @@ const ImageWrapper = styled.div`
 
 const Image = styled.img`
   scale: 1.05;
+  transition: all 0.5s ease-in-out;
+  @media (max-width: 1024px) {
+    height: 400px;
+  };
+  @media (max-width: 740px) {
+    height: 300px;
+  };
 `
 
 export default PortfolioSwiper;

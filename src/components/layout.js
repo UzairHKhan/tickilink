@@ -7,6 +7,7 @@ import Career from "./career";
 import banner from "../images/banner.svg";
 import Portfolio from "./portfolio";
 import Testimonial from "./testimonial";
+import Plans from "./Plans";
 
 const Layout = ({ chilldren }) => {
   return (
@@ -18,8 +19,9 @@ const Layout = ({ chilldren }) => {
         <Banner src={banner} alt="banner" />
       </BannerWrapper>
       <Portfolio />
-      <Career />
-      <Testimonial />
+      {/* <Career /> */}
+      <Plans />
+      {/* <Testimonial /> */}
       {/* <Service /> */}
     </Containter>
   );
@@ -31,6 +33,7 @@ const Containter = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow-x: hidden;
 `;
 
 const BannerWrapper = styled.div`
@@ -39,10 +42,10 @@ const BannerWrapper = styled.div`
   align-items: center;
   overflow: hidden;
   width: 100vw;
-  height: 300px;
+  height: 200px;
 `;
 
 const Banner = styled.img`
   width: 100vw;
-  scale: 1.1;
+  /* scale: 1.1; */
 `;

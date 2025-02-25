@@ -8,10 +8,10 @@ const Hero = () => {
     const header = document.getElementById("header");
     const headerHeight = header.offsetHeight;
     setHeaderHeight(headerHeight);
-  }, [])
+  }, []);
 
   return (
-    <Section headerHeight={headerHeight} className="wrapper">
+    <Section headerHeight={headerHeight}>
       <video width="100%" autoPlay loop muted>
         <source src="/intro-video.mp4" type="video/mp4" />
         Yo browser does not support the video format.
@@ -22,12 +22,12 @@ const Hero = () => {
 
 export default Hero;
 
-// Styled Components
 const Section = styled.section`
   margin: 32px 0;
   border-radius: 12px;
   overflow: hidden;
-  video {
-    scale: 1.35;
+  width: 80%;
+  @media screen and (max-width: 550px) {
+    width: 90%;    
   }
-  `;
+`;

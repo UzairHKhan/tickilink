@@ -5,17 +5,37 @@ import aboutImg from "../images/about.png";
 import RoundButton from "./commons/RoundButton";
 import AnimatedButton from "./commons/AnimatedButton";
 const servicesData = [
-  { img: digitalServices, text: "Digital Services", button: "" },
-  { img: digitalServices, text: "Digital Services", button: "" },
-  { img: digitalServices, text: "Digital Services", button: "" },
-  { img: digitalServices, text: "Digital Services", button: "" },
+  {
+    img: digitalServices,
+    text: "Digital Services",
+    description:
+      "Lorem ipsum dolor sit amet consectetur. Vitae purus faucibus velit est a. Posuere volutpat blandit lectus nisl vitae lacus a",
+  },
+  {
+    img: digitalServices,
+    text: "Digital Services",
+    description:
+      "Lorem ipsum dolor sit amet consectetur. Vitae purus faucibus velit est a. Posuere volutpat blandit lectus nisl vitae lacus a",
+  },
+  {
+    img: digitalServices,
+    text: "Digital Services",
+    description:
+      "Lorem ipsum dolor sit amet consectetur. Vitae purus faucibus velit est a. Posuere volutpat blandit lectus nisl vitae lacus a",
+  },
+  {
+    img: digitalServices,
+    text: "Digital Services",
+    description:
+      "Lorem ipsum dolor sit amet consectetur. Vitae purus faucibus velit est a. Posuere volutpat blandit lectus nisl vitae lacus a",
+  },
 ];
 const About = () => {
   return (
     <AboutContainer className="wrapper">
       <Services>What We Do</Services>
       <ServiceContent>
-        <div>
+        <TextContentWrapper>
           <Title>Our software development and consulting services</Title>
           <TextContent>
             Lorem ipsum dolor sit amet consectetur. Vitae purus faucibus velit
@@ -53,8 +73,7 @@ const About = () => {
               </li>
             </ul>
           </TextContent>
-          <AnimatedButton>Our All Services</AnimatedButton>
-        </div>
+        </TextContentWrapper>
         <ServicesWrapper>
           {servicesData.map((item, idx) => (
             <div key={idx}>
@@ -62,11 +81,14 @@ const About = () => {
                 <img
                   src={item.img}
                   alt={item.text || "Service image"}
-                  height={"122px"}
-                  width={"190px"}
+                  height={"100px"}
+                  width={"150px"}
                 />
-                <Typography>{item.text}</Typography>
-                <RoundButton />
+                <div>
+                  <ServiceHeading>{item.text}</ServiceHeading>
+                  <ServiceDescription>{item.description}</ServiceDescription>
+                </div>
+                {/* <RoundButton /> */}
               </ServiceItem>
               <Divider />
             </div>
@@ -100,35 +122,51 @@ const Services = styled.div`
 
 const Title = styled.div`
   color: #ffffff;
-  width: 698px;
-  height: 120px;
+  /* width: 698px; */
+  /* height: 120px; */
   font-family: "Sharp Grotesk";
-  font-size: 48px;
+  font-size: 28px;
   font-weight: 600;
-  line-height: 60px;
   margin-top: 22px;
+  @media screen and (max-width: 800px) {
+    font-size: 24px;
+  }
 `;
+
+const TextContentWrapper = styled.div`
+  max-width: 50%;
+  @media screen and (max-width: 800px) {
+    max-width: 100%;
+  }
+`;
+
 const TextContent = styled.div`
   color: #8b8b8b;
   font-family: Manrope;
   font-size: 15px;
   font-weight: 400;
-  line-height: 30px;
-  width: 636px;
-  height: 420px;
+  line-height: 25px;
+  /* width: 636px;
+  height: 420px; */
   margin-top: 22px;
   margin-bottom: 75px;
 `;
 
 const ServiceContent = styled.div`
   display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: space-between;
 `;
 
 const ServicesWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  width: 838px;
+  max-width: 45%;
   row-gap: 50px;
+  @media screen and (max-width: 800px) {
+    max-width: 100%;
+  }
 `;
 
 const Divider = styled.hr`
@@ -140,12 +178,26 @@ const ServiceItem = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 16px;
 `;
 
-const Typography = styled.p`
+const ServiceHeading = styled.p`
   font-family: Sharp Grotesk;
-  font-size: 48px;
+  font-size: 24px;
   font-weight: 600;
-  line-height: 60px;
   color: #ffffff;
+  @media screen and (max-width: 958px) {
+    font-size: 18px;
+  }
+`;
+
+const ServiceDescription = styled.p`
+  font-family: Manrope;
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 8px;
+  color: #8b8b8b;
+  @media screen and (max-width: 958px) {
+    font-size: 12px;
+  }
 `;

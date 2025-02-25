@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { FaArrowRight } from "react-icons/fa";
+import { FaBars } from "react-icons/fa";
 import logo from "../images/logo.svg";
 import { navItem } from "./data";
 import AnimatedButton from "./commons/AnimatedButton";
@@ -7,18 +7,21 @@ import AnimatedButton from "./commons/AnimatedButton";
 const Navbar = () => {
   return (
     <Header id="header">
-      <Nav className="wrapper">
+      <Nav>
         <div>
-          <img src={logo} alt="tickilinkLogo" height='70px' />
+          <Image src={logo} alt="tickilinkLogo" height="70px" />
         </div>
         <NavItem>
           {navItem?.map((item, ind) => {
             return <li key={ind}>{item}</li>;
           })}
         </NavItem>
-        <AnimatedButton>
-          Contact Us
-        </AnimatedButton>
+        <AnimatedButtonWrapper>
+          <AnimatedButton>Contact Us</AnimatedButton>
+        </AnimatedButtonWrapper>
+        <MobileMenu className="mobileMenu">
+          <FaBars size={24} color="#fff" />
+        </MobileMenu>
       </Nav>
     </Header>
   );
@@ -37,21 +40,25 @@ const Nav = styled.nav`
   padding: 12px 10px;
   align-items: center;
   margin: 0 auto;
+  width: 90%;
 `;
 const NavItem = styled.ul`
   display: flex;
   list-style: none;
+  @media (max-width: 815px) {
+    display: none;
+  }
   li {
     cursor: pointer;
-    padding: 10px 20px;
+    padding: 12px;
     color: #fff;
     font-family: Manrope;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
     line-height: 18px;
   }
   li:hover {
-    color: #F0A351;
+    color: #f0a351;
     border-radius: 2px;
   }
 `;
@@ -70,4 +77,28 @@ const Button = styled.div`
   align-items: center;
   gap: 8px;
   cursor: pointer;
+`;
+
+const AnimatedButtonWrapper = styled.span`
+  @media screen and (max-width: 815px) {
+    display: none;
+  }
+`;
+
+const MobileMenu = styled.button`
+  display: block;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  @media screen and (min-width: 815px) {
+    display: none;
+  }
+`;
+
+const Image = styled.img`
+  @media screen and (max-width: 815px) {
+    height: 50px;
+  }
 `;

@@ -4,13 +4,15 @@ import PortfolioSwiper from "./commons/PortfolioSwiper";
 const Portfolio = () => {
   return (
     <PortfolioContainer>
-      <PortfolioSection>Portfolio</PortfolioSection>
-      <Title>Translating Technolo Into A Positive Impact</Title>
-      <TextContent>
-        We are proud of our work and the impact it has on our clients and their
-        customers. We have worked with a variety of industries, from healthcare
-        to finance, and we are always excited to take on new challenges.
-      </TextContent>
+      <PortfolioTextWrapper>
+        <PortfolioSection>Portfolio</PortfolioSection>
+        <Title>Translating Technolo Into A Positive Impact</Title>
+        <TextContent>
+          We are proud of our work and the impact it has on our clients and their
+          customers. We have worked with a variety of industries, from healthcare
+          to finance, and we are always excited to take on new challenges.
+        </TextContent>
+      </PortfolioTextWrapper>
       <PortfolioSwiper />
     </PortfolioContainer>
   );
@@ -18,11 +20,9 @@ const Portfolio = () => {
 
 const PortfolioContainer = styled.div`
   display: flex;
-  position: relative;
   flex-direction: column;
   align-items: center;
   margin-top: 32px;
-  column-gap: 116px;
 `;
 
 const PortfolioSection = styled.div`
@@ -36,24 +36,26 @@ const PortfolioSection = styled.div`
 
 const Title = styled.div`
   color: #ffffff;
-  width: 698px;
-  height: 120px;
   font-family: "Sharp Grotesk";
-  font-size: 48px;
+  font-size: 32px;
   font-weight: 600;
-  line-height: 60px;
+  line-height: 48px;
   margin-top: 22px;
   text-align: center;
 `;
 const TextContent = styled.div`
   color: #8b8b8b;
   font-family: Manrope;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 400;
-  line-height: 30px;
-  width: 636px;
+  line-height: 24px;
   margin-top: 22px;
   text-align: center;
+`;
+
+const PortfolioTextWrapper = styled.div`
+  max-width: 550px;
+  padding: 0 16px;
 `;
 
 export default Portfolio;

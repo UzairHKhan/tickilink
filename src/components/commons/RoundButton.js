@@ -15,7 +15,7 @@ export default RoundButton;
 const Button = styled.div`
   background: linear-gradient(90deg, #dd5901 0%, #fcd183 100%);
   border-radius: 50%;
-  padding: 14px;
+  padding: 8px;
   border: none;
   color: #fff;
   cursor: pointer;
