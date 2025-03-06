@@ -21,7 +21,7 @@ const Layout = ({ chilldren }) => {
       <Portfolio />
       {/* <Career /> */}
       <Plans />
-      {/* <Testimonial /> */}
+      <Testimonial />
       {/* <Service /> */}
     </Containter>
   );
@@ -42,7 +42,25 @@ const BannerWrapper = styled.div`
   align-items: center;
   overflow: hidden;
   width: 100vw;
-  height: 200px;
+  height: 300px;
+  @media screen and (max-width: 1240px) {
+    height: 250px;
+  }
+  @media screen and (max-width: 1024px) {
+    height: 220px;
+  }
+  @media screen and (max-width: 768px) {
+    height: 200px;
+  }
+  @media screen and (max-width: 480px) {
+    height: 150px;
+  }
+  @media screen and (max-width: 360px) {
+    height: 100px;
+  }
+  @media screen and (max-width: 425px) {
+    height: 80px;
+  }
 `;
 
 const Banner = styled.img`

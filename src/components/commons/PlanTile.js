@@ -5,7 +5,6 @@ const PlanTile = ({ children }) => {
 };
 
 const Tile = styled.div`
-  width: 160px;
   padding: 16px;
   border-radius: 10px;
   background: #1a1b1e;
@@ -15,6 +14,7 @@ const Tile = styled.div`
   align-items: center;
   font-family: Manrope;
   color: #f0a351;
+  min-height: 280px;
   cursor: pointer;
   &:hover {
     background: url("/plans-tile-bg.png"),
