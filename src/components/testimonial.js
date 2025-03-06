@@ -78,22 +78,15 @@ const Testimonial = () => {
 export default Testimonial;
 
 const TestimonialSection = styled.div`
-  /* color: #fff; */
-  padding: 40px 20px;
-  /* width: auto; */
-  width: 1400px;
-  margin-left: 60px;
   margin-bottom: 60px;
-  /* text-align: center; */
 `;
 
 const Title = styled.h2`
   font-weight: 600;
-  font-size: 48px;
+  font-size: 2rem;
   color: #ffffff;
-  display: flex;
-  justify-content: center;
   font-family: Sharp Grotesk;
+  text-align: center;
 `;
 
 const Subtitle = styled.span`
@@ -101,9 +94,10 @@ const Subtitle = styled.span`
   font-weight: 700;
   display: flex;
   justify-content: center;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 21px;
   margin-bottom: 10px;
+  margin-top: 40px;
 `;
 
 const StyledSlider = styled(Slider)`
@@ -114,12 +108,7 @@ const StyledSlider = styled(Slider)`
 
 const TestimonialWrapper = styled.div`
   background: #1a1b1e;
-  /* padding: 20px; */
   border-radius: 20px;
-  /* display: flex; */
-  /* justify-content: center; */
-  /* margin: 20px auto; */
-  width: 1400px;
   margin-top: 40px;
 `;
 
@@ -128,19 +117,17 @@ const QuoteContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 20px auto;
-  height: 150px;
+  margin-bottom: 20px;
 `;
 
 const QuoteText = styled.p`
-  font-size: 18px;
-  display: flex;
+  font-size: 1.0625rem;
   color: #666666;
   font-family: Albert Sans;
   line-height: 35px;
-  justify-content: center;
-  margin: 0;
+  text-align: center;
   opacity: 0.8;
+  padding: 10px;
 `;
 
 const CustomerInfo = styled.div`
@@ -152,7 +139,6 @@ const CustomerInfo = styled.div`
 `;
 
 const CustomerImage = styled.img`
-  width: 50px;
   height: 50px;
   border-radius: 50%;
   margin-right: 10px;
@@ -187,7 +173,7 @@ const CustomNavigation = styled.div`
   justify-content: center;
   margin-top: 20px;
   gap: 10px;
-  width: 1400px;
+  /* width: 1400px; */
 `;
 
 const Dash = styled.div`
@@ -199,10 +185,9 @@ const Dash = styled.div`
 `;
 
 const QuoteSvg = styled.img`
-  width: 40px;
+  /* width: 40px; */
   height: auto;
   margin-bottom: 20px;
-  /* display: block; */
   text-align: center;
 `;
 
